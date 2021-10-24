@@ -93,6 +93,7 @@
   >>> print(3, end='')
 
 7.4. 연습문제
+#1
   >>> year = 2021
   >>> month = 10
   >>> day = 24
@@ -102,5 +103,42 @@
   >>> print(year, month, day, sep='/', end=' ')
   >>> print(hour, minute, second, sep=':')
 
+#2
+  >>> print(year, month, day, sep='-', end='T')
+
+
+#Unit 8 불과 논리, 비교 연산자
+
+8.1. =, !=와 is, is not
+=, !=는 값 자체를 비교
+is, is not은 객체가 같은지를 비교
+
+1과 1.0은 정수, 실수로, 객체가 다름. 
+  >>> print(1 == 1.0)
+  True
+  >>> print(1 is not 1.0)
+  True
   
+  >>> id(1)
+  1714767504
+  >>> id(1.0)
+  55320032
   
+8.2. 논리연산자
+  * 정수, 실수, 문자열을 불로 만들기
+  >>> bool(1.5)
+  정수 0, 실수 0.0 -> False
+  나머지 정수, 실수는 모두 -> True
+  빈문자열 '', "" -> False
+  나머지 문자열은 모두 -> True
+  
+  * 단락평가(short-circuit evaluation)
+  1) 첫 번째 값에서 결과가 확실하면 첫 번째 값의 결과를 도출함
+  >>> print(False and True)     # False
+  >>> print(True or False)      # True
+  >>> print(0 and 'Python')     # 0
+  
+  2) 첫 번째 값만으로 확실하지 않으면 두 번째 값을 살펴보고, 두 번째 값의 결과를 도출함.
+  >>> print(False or True)        # True
+  >>> print(True and 'Python')    # Python
+  >>> print(False or 0)           # 0
