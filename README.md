@@ -142,3 +142,7 @@ is, is not은 객체가 같은지를 비교
   >>> print(False or True)        # True
   >>> print(True and 'Python')    # Python
   >>> print(False or 0)           # 0
+
+8.3. 연습문제
+>>> korean, english, math, science = map(int, input().split())
+  >>> print(korean >= 90 and english > 80 and math > 85 and science >= 80)
